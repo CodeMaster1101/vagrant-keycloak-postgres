@@ -1,0 +1,1 @@
+# keycloak-vagrant-postgres-stack
