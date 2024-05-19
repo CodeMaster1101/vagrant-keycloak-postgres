@@ -12,7 +12,7 @@ ExecStart=/opt/keycloak/keycloak-start.sh
 ExecStop=/opt/keycloak/keycloak-stop.sh
 ExecReload=/opt/keycloak/keycloak-restart.sh
 StandardOutput=null
-Restart=on-failure
+Restart=Always
 
 [Install]
 WantedBy=multi-user.target

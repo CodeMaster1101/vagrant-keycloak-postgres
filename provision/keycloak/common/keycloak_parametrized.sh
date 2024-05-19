@@ -21,7 +21,7 @@ cat <<EOF > /opt/keycloak/keycloak-start.sh
 #!/bin/bash
 
 # Start the application
-bash /opt/keycloak/bin/kc.sh start-dev --http-port=$keycloak_port --db=postgres --db-username=$keycloak_db_username --db-password=$keycloak_db_password --db-url=jdbc:postgresql://$keycloak_host:$postgresql_port/$keycloak_db_name
+bash /opt/keycloak/bin/kc.sh start-dev --http-port=$keycloak_port --db=postgres --db-username=$keycloak_db_username --db-password=$keycloak_db_password --db-url=jdbc:postgresql://$postgresql_host:$postgresql_port/$keycloak_db_name
 
 # Capture the PID of the background process
 PID=$!
