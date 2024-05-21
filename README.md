@@ -35,8 +35,13 @@ Now execute the command
 ```bash
 vagrant up
 ```
-
 To initialize the two virtual machines (Keycloak and Postgresql).
+
+### In case of failiure
+If for some reason, the VMs can not be booted up due to the Box. 
+1. Go to the link: 'https://drive.google.com/uc?export=download&id=1scqAQ1FMp81kbWM_Y-8fxarW-1i1Xvj5'
+2. Download the Box.
+3. Place it in ../boxes/vbox-ubuntu
 
 ### 4. Open the Keycloak admin panel
 

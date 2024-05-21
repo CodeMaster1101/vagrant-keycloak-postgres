@@ -4,8 +4,7 @@ source /vagrant/environment.properties
 echo -e "${ORANGE}Keycloak provisioning ${YELLOW}START${ORANGE}!!!${NC}"
 
 sudo mkdir -p /opt/keycloak/conf
-
-sudo chmod 777 -R /opt/keycloak
+sudo chmod 777 /opt/keycloak/ -Rf
 
 # Install java 17
 sudo bash /vagrant/provision/java/java17_provision.sh
@@ -17,7 +16,11 @@ sudo bash /vagrant/provision/keycloak/common/keycloak_parametrized.sh
 sudo cp /vagrant/provision/keycloak/common/scripts/keycloak-* /opt/keycloak/
 
 sudo cp /vagrant/provision/keycloak/common/keycloak.service /etc/systemd/system/keycloak.service
+
+sudo chmod 777 -R /opt/keycloak
+
 sudo systemctl enable keycloak
 sudo systemctl start keycloak
+sudo systemctl status keycloak
 
 echo -e "${ORANGE}Keycloak provisioning ${GREEN}DONE${ORANGE}!!!${NC}"
